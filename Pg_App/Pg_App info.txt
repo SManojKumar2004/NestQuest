@@ -1,0 +1,26 @@
+1. Entity Layer
+   All 10 entity classes, primary keys, foreign keys and relationships.
+
+2. Repository Layer Next
+   Create interfaces extending Jpa Repository.
+
+3. Database Configuration
+   Connect Spring Boot to MySQL and verify generated tables.
+
+4. DTO Layer
+   Create request and response classes for API communication.
+
+5. Service Layer
+   Implement business logic and CRUD operations.
+
+5. Controller Layer
+   Create REST APIs for frontend communication.
+
+6. Exception Handling & Validation
+   Handle invalid inputs, missing records and database errors.
+
+7. Spring Security
+   Implement registration, login, roles and JWT authentication.
+
+8. Testing & Frontend Integration
+   Test APIs using Postman and connect React.

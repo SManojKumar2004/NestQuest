@@ -1,0 +1,5 @@
+package com.nestquest.entity;
+
+public class PropertyImage {
+
+}

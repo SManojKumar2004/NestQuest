@@ -1,0 +1,44 @@
+package com.nestquest.entity;
+
+import java.util.List;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Table(name = "users")
+@Getter
+@Setter
+public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer userId;
+
+    private String name;
+
+    @Column(unique = true)
+    private String email;
+
+    private String passwordHash;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    // One user can own multiple properties
+    @OneToMany(mappedBy = "owner")
+    private List<Property> properties;
+
+    // One user can write multiple reviews
+    @OneToMany(mappedBy = "tenant")
+    private List<Review> reviews;
+
+    // One user can raise multiple complaints
+    @OneToMany(mappedBy = "raisedBy")
+    private List<Complaint> complaints;
+
+    // One user can make multiple bookings
+    @OneToMany(mappedBy = "tenant")
+    private List<Booking> bookings;
+}
+

@@ -1,0 +1,32 @@
+package com.nestquest.entity;
+
+import com.nestquest.enums.ComplaintStatus;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Complaint {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer complaintId;
+
+	@Enumerated(EnumType.STRING)
+	private ComplaintStatus status;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "property_id")
+	private Property property;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "raised_by")
+	private User raisedBy;
+}

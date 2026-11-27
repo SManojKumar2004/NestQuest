@@ -1,0 +1,45 @@
+package com.nestquest.entity;
+
+
+import java.time.LocalDate;
+import java.util.List;
+
+import com.nestquest.enums.BookingStatus;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Booking {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer bookingId;
+
+    private LocalDate checkInDate;
+
+    @Enumerated(EnumType.STRING)
+    private BookingStatus status;
+
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "tenant_id")
+    private User tenant;
+
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "bed_id")
+    private Bed bed;
+
+  
+    @OneToMany(mappedBy = "booking")
+    private List<Payment> payments;
+}
+

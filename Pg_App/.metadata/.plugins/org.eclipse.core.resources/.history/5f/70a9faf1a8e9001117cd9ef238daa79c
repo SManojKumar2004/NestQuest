@@ -1,0 +1,30 @@
+package com.nestquest.entity;
+
+import com.nestquest.enums.ComplaintStatus;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+public class Complaint {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer complaintId;
+
+    @Enumerated(EnumType.STRING)
+    private ComplaintStatus status;
+
+    // Multiple complaints belong to one property
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "property_id")
+    private Property property;
+
+    // Multiple complaints can be raised by one user
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "raised_by")
+    private User raisedBy;
+}

@@ -1,0 +1,28 @@
+package com.nestquest.entity;
+
+
+import java.util.Set;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Amenity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer amenityId;
+
+    private String name;
+
+    // One amenity can belong to multiple properties
+    @ManyToMany(mappedBy = "amenities")
+    private Set<Property> properties;
+}
+

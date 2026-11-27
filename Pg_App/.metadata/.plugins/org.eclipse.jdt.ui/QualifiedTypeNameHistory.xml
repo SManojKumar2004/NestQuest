@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="jakarta.annotation.Generated"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="com.nestquest.enums.Role"/>
+    <fullyQualifiedTypeName name="com.nestquest.enums.BedStatus"/>
+    <fullyQualifiedTypeName name="com.nestquest.enums.BookingStatus"/>
+    <fullyQualifiedTypeName name="com.nestquest.enums.ComplaintStatus"/>
+    <fullyQualifiedTypeName name="com.nestquest.enums.PaymentStatus"/>
+    <fullyQualifiedTypeName name="com.nestquest.enums.PropertyStatus"/>
+    <fullyQualifiedTypeName name="com.nestquest.enums.RoomStatus"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="com.nestquest.entity.User"/>
+    <fullyQualifiedTypeName name="com.nestquest.entity.Amenity"/>
+    <fullyQualifiedTypeName name="com.nestquest.entity.Bed"/>
+    <fullyQualifiedTypeName name="com.nestquest.entity.Booking"/>
+    <fullyQualifiedTypeName name="com.nestquest.repository.ComplaintRepository"/>
+    <fullyQualifiedTypeName name="com.nestquest.entity.Complaint"/>
+    <fullyQualifiedTypeName name="com.nestquest.entity.Payment"/>
+    <fullyQualifiedTypeName name="com.nestquest.entity.Property"/>
+    <fullyQualifiedTypeName name="com.nestquest.entity.PropertyImage"/>
+    <fullyQualifiedTypeName name="com.nestquest.entity.Review"/>
+    <fullyQualifiedTypeName name="com.nestquest.entity.Room"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+</qualifiedTypeNameHistroy>
